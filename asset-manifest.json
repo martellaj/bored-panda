@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bored-panda/static/css/main.13d83c98.css",
-    "main.js": "/bored-panda/static/js/main.e401d2b4.js",
+    "main.js": "/bored-panda/static/js/main.e5c061c9.js",
     "static/js/787.63efbbab.chunk.js": "/bored-panda/static/js/787.63efbbab.chunk.js",
     "index.html": "/bored-panda/index.html",
     "main.13d83c98.css.map": "/bored-panda/static/css/main.13d83c98.css.map",
-    "main.e401d2b4.js.map": "/bored-panda/static/js/main.e401d2b4.js.map",
+    "main.e5c061c9.js.map": "/bored-panda/static/js/main.e5c061c9.js.map",
     "787.63efbbab.chunk.js.map": "/bored-panda/static/js/787.63efbbab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13d83c98.css",
-    "static/js/main.e401d2b4.js"
+    "static/js/main.e5c061c9.js"
   ]
 }
