@@ -34,8 +34,8 @@ export function getStats() {
         scores,
         gamesPlayed: played,
         gamesWon: won,
-        averageWinTime: parseFloat((totalTimeWinning / won).toFixed(2)),
-        fastestWinTime: fastestTime,
+        averageWinTime: parseFloat((totalTimeWinning / won).toFixed(2)) || 0,
+        fastestWinTime: won > 0 ? fastestTime : 0,
       };
 
       window.localStorage.setItem("stats", JSON.stringify(data));
