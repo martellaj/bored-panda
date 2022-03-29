@@ -6,7 +6,7 @@ import { Icon } from "semantic-ui-react";
 import HowToPlay from "./HowToPlay";
 import About from "./About";
 import toggleDarkMode from "./toggleDarkMode";
-import { consolidate } from "./resultsCache";
+import { getStats } from "./resultsCache";
 import ScoreDistribution from "./ScoreDistribution";
 
 // set the app height for mobile
@@ -19,11 +19,27 @@ window.addEventListener("resize", appHeight);
 appHeight();
 
 // consolidate scores for results
-consolidate();
+const stats = getStats();
+
+// go to new site
+// window.location.href = `https://playcladder.com${
+//   stats ? `?stats=${JSON.stringify(stats)}` : ""
+// }`;
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
+
+setTimeout(() => {
+  if (params?.fwd) {
+    console.log("a");
+    // go to new site
+    window.location.href = `https://playcladder.com${
+      stats ? `?stats=${JSON.stringify(stats)}` : ""
+    }`;
+  }
+  console.log("b");
+}, 50);
 
 function App() {
   const [view, setView] = useState("menu");
